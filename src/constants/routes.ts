@@ -1,0 +1,10 @@
+export const HOME = '/';
+export const CREATE_ACCOUNT = '/register-student';
+export const LOGIN = '/login';
+export const LOGOUT = '/logout';
+export const PROGRAM = '/program';
+export const SCHOOL = '/school';
+export const STUDENT_DASHBOARD = '/student-dashboard';
+export const TEACHER_LISTINGS = 'teacher-listings';
+export const TEACHER_DASHBOARD = '/teacher-dashboard';
+export const USER_PROFILE = 'user/:id';
