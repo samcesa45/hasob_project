@@ -1,16 +1,18 @@
 import React, { useEffect } from 'react';
 import CloseIcon from '../Icons/CloseIcon';
 import Modal from '../UI/Modal';
-import useForm from '../useForm/useFormHooks';
+import useForm from '../useHook/useFormHooks';
 
 import { ROLE } from '../model/users-model';
 import { useAppDispatch, useAppSelector } from '../reduxStore/app/hooks';
 import { clearAuthError } from '../reduxStore/features/auth/authSlice';
 import { CreateAccount } from '../reduxStore/features/auth/auth.actions';
 import { Helmet } from 'react-helmet-async';
+import { useModal } from '../useHook/useModal';
 
 export default function Registration(): JSX.Element {
 	const { error, status } = useAppSelector((state) => state.auth);
+	const { closeModal, setVisible } = useModal(true);
 	const dispatch = useAppDispatch();
 	// const [formState, setFormState] = useState<LoginData>({
 	// 	email: '',
@@ -43,7 +45,7 @@ export default function Registration(): JSX.Element {
 				</Helmet>
 				<form onSubmit={onFormSubmit}>
 					<div className="flex justify-end">
-						<CloseIcon onClose={() => console.log('close')} />
+						<CloseIcon onClick={() => setVisible(false)} />
 					</div>
 					<h1 className="text-4xl my-4 text-center text-blue-900  font-semibold">
 						Welcome Back

@@ -1,10 +1,11 @@
 import * as React from 'react';
-interface Props{
-    show:()=>void
+interface Props {
+	toggle: () => void;
 }
-export default function BurgerIcon({show}:Props): JSX.Element {
+export default function BurgerIcon({ toggle }: Props): JSX.Element {
 	return (
-		<svg onClick={show}
+		<svg
+			onClick={toggle}
 			xmlns="http://www.w3.org/2000/svg"
 			className="w-6 md:hidden"
 			fill="none"

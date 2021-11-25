@@ -1,13 +1,13 @@
 import { loadCurrentUser, CreateAccount, login, logout } from './auth.actions';
 import { createSlice } from '@reduxjs/toolkit';
-import { AuthState,User } from '../../../model/users-model';
+import { AuthState } from '../../../model/users-model';
 
-export const initialState: AuthState = {
+let initialState = Object.freeze({
 	isAuthenticated: false,
 	error: '',
 	status: 'idle',
-	user:null,
-};
+	user: {},
+}) as AuthState;
 
 const authSlice = createSlice({
 	name: 'auth',
@@ -24,14 +24,11 @@ const authSlice = createSlice({
 		});
 
 		//handles auth/loadCurrentUser
-		builder.addCase(
-			loadCurrentUser.fulfilled,
-			(state, { payload: { user } }) => {
-				state.isAuthenticated = true;
-				state.status = 'resolved';
-				state.user =user;
-			}
-		);
+		builder.addCase(loadCurrentUser.fulfilled, (state, { payload }) => {
+			state.isAuthenticated = true;
+			state.status = 'resolved';
+			// state.user = payload;
+		});
 
 		builder.addCase(loadCurrentUser.rejected, (state) => {
 			state.isAuthenticated = false;
@@ -42,10 +39,10 @@ const authSlice = createSlice({
 			state.status = 'pending';
 		});
 
-		builder.addCase(CreateAccount.fulfilled, (state, { payload: { user } }) => {
+		builder.addCase(CreateAccount.fulfilled, (state, { payload }) => {
 			state.isAuthenticated = true;
 			state.status = 'resolved';
-			state.user = user;
+			// state.user = payload;
 		});
 
 		builder.addCase(CreateAccount.rejected, (state, { payload }) => {
@@ -58,10 +55,10 @@ const authSlice = createSlice({
 			state.status = 'pending';
 		});
 
-		builder.addCase(login.fulfilled, (state, { payload: { user} }) => {
+		builder.addCase(login.fulfilled, (state, { payload }) => {
 			state.isAuthenticated = true;
 			state.status = 'resolved';
-			state.user = user;
+			// state.user = payload;
 		});
 
 		builder.addCase(login.rejected, (state, { payload }) => {

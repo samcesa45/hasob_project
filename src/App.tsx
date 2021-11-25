@@ -2,6 +2,7 @@ import React from 'react';
 import { ErrorBoundary } from './components/ErrorBoundary';
 
 import Header from './components/Header';
+import Layout from './components/Layout';
 import { store } from './reduxStore/app';
 import { loadCurrentUser } from './reduxStore/features/auth/auth.actions';
 import { Router } from './router/Router';
@@ -15,7 +16,9 @@ function App() {
 		<>
 			<ErrorBoundary>
 				<Header />
+				<Layout>
 				<Router />
+				</Layout>
 			</ErrorBoundary>
 			{/* <Header />
 

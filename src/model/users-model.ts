@@ -45,7 +45,7 @@ export interface AuthState {
 	status: Status;
 	isAuthenticated: boolean;
 	error: string;
-	user: null;
+	user: User;
 }
 
 export interface ErrorState {

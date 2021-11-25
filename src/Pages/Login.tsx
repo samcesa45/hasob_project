@@ -9,8 +9,10 @@ import { useAppDispatch, useAppSelector } from '../reduxStore/app/hooks';
 import { clearAuthError } from '../reduxStore/features/auth/authSlice';
 import { login } from '../reduxStore/features/auth/auth.actions';
 import { Helmet } from 'react-helmet-async';
+import { useModal } from '../useHook/useModal';
 
 export default function Login(): JSX.Element {
+	const { showModal, closeModal, visible, setVisible } = useModal(false);
 	const { error, status } = useAppSelector((state) => state.auth);
 	const dispatch = useAppDispatch();
 	const [formState, setFormState] = useState<LoginData>({
@@ -41,7 +43,7 @@ export default function Login(): JSX.Element {
 				</Helmet>
 				<form onSubmit={onFormSubmit}>
 					<div className="flex justify-end">
-						<CloseIcon onClose={() => console.log('close')} />
+						<CloseIcon onClick={() => closeModal()} />
 					</div>
 					<h1 className="text-4xl my-4 text-center text-blue-900  font-semibold">
 						Welcome Back

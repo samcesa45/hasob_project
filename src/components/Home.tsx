@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import heroImg from '../assets/img/schoolHero.jpeg';
+import { useModal } from '../useHook/useModal';
+// import SideBar from './SideBar';
 // import Login from '../Pages/Login';
 
 interface Props {
@@ -13,6 +15,7 @@ export default function Home({
 	onHide,
 	modalIsSHown,
 }: Props): JSX.Element {
+	const { showModal } = useModal(false);
 	return (
 		<>
 			<section className="relative bg-white overflow-hidden">
@@ -39,7 +42,7 @@ export default function Home({
 						<div className="mt-8">
 							<button
 								className="bg-blue-900 py-1 px-8 text-white  font-medium rounded-md shadow-lg mr-12 z-10 text-2xl"
-								onClick={onShow}>
+								onClick={() => showModal()}>
 								<Link to="/login">Login</Link>
 							</button>
 

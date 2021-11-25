@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ROLE, CreateAccountData } from '../model/users-model';
+import { CreateAccountData } from '../model/users-model';
 
 const useForm = (initialState: CreateAccountData) => {
 	const [values, setValues] = useState<CreateAccountData>(initialState);

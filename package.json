@@ -1,4 +1,5 @@
 {
+	"homepage": "https://samcesa45.github.io/hasob_project/",
 	"name": "hasob_project",
 	"version": "0.1.0",
 	"private": true,
@@ -16,6 +17,7 @@
 		"@types/react-redux": "^7.1.20",
 		"@types/webpack-env": "^1.16.3",
 		"axios": "^0.24.0",
+		"gh-pages": "^3.2.3",
 		"install": "^0.13.0",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
@@ -31,7 +33,9 @@
 		"start": "craco start",
 		"build": "craco build",
 		"test": "craco test",
-		"eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+		"predeploy": "yarn build",
+		"deploy": "gh-pages -b gh-page -d build"
 	},
 	"eslintConfig": {
 		"extends": [

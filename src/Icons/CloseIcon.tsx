@@ -1,11 +1,11 @@
 import * as React from 'react';
 interface Props {
-	onClose: () => void;
+	onClick: () => void;
 }
-export default function CloseIcon({ onClose }: Props): JSX.Element {
+export default function CloseIcon({ onClick }: Props): JSX.Element {
 	return (
 		<svg
-			onClick={onClose}
+			onClick={onClick}
 			xmlns="http://www.w3.org/2000/svg"
 			className="h-6 w-6 font-extrabold text-gray-600"
 			fill="none"

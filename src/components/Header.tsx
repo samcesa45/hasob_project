@@ -5,9 +5,10 @@ import BurgerIcon from '../Icons/BurgerIcon';
 
 export default function Header(): JSX.Element {
 	const [showMenu, setShowMenu] = React.useState(false);
-	function showMenuHandler() {
-		setShowMenu(true);
+	function toggleMenuHandler() {
+		setShowMenu((prev) => !prev);
 	}
+
 	return (
 		<>
 			<header className="fixed w-full flex pl-5 pr-5 justify-between items-center h-16 bg-blue-900  text-white z-50">
@@ -18,7 +19,7 @@ export default function Header(): JSX.Element {
 				</div>
 
 				<nav>
-					<BurgerIcon show={showMenuHandler} />
+					<BurgerIcon toggle={toggleMenuHandler} />
 					{!showMenu && (
 						<ul className="hidden md:flex text-lg">
 							<li className="mr-10">
