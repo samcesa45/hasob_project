@@ -1,4 +1,2 @@
-# demo
-
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# demo [to run project](https://samcesa45.github.io/hasob_project/).
 
