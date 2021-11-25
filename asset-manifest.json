@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/hasob_project/static/css/main.bfb77bc2.chunk.css",
+    "main.js": "/hasob_project/static/js/main.584c4dee.chunk.js",
+    "main.js.map": "/hasob_project/static/js/main.584c4dee.chunk.js.map",
+    "runtime-main.js": "/hasob_project/static/js/runtime-main.cdf0942f.js",
+    "runtime-main.js.map": "/hasob_project/static/js/runtime-main.cdf0942f.js.map",
+    "static/js/2.12e754b6.chunk.js": "/hasob_project/static/js/2.12e754b6.chunk.js",
+    "static/js/2.12e754b6.chunk.js.map": "/hasob_project/static/js/2.12e754b6.chunk.js.map",
+    "static/js/3.b7f9dde7.chunk.js": "/hasob_project/static/js/3.b7f9dde7.chunk.js",
+    "static/js/3.b7f9dde7.chunk.js.map": "/hasob_project/static/js/3.b7f9dde7.chunk.js.map",
+    "index.html": "/hasob_project/index.html",
+    "static/css/main.bfb77bc2.chunk.css.map": "/hasob_project/static/css/main.bfb77bc2.chunk.css.map",
+    "static/js/2.12e754b6.chunk.js.LICENSE.txt": "/hasob_project/static/js/2.12e754b6.chunk.js.LICENSE.txt",
+    "static/media/client_logo.826b4e06.png": "/hasob_project/static/media/client_logo.826b4e06.png",
+    "static/media/schoolHero.88584749.jpeg": "/hasob_project/static/media/schoolHero.88584749.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cdf0942f.js",
+    "static/js/2.12e754b6.chunk.js",
+    "static/css/main.bfb77bc2.chunk.css",
+    "static/js/main.584c4dee.chunk.js"
+  ]
+}
